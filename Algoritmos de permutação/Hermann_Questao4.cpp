@@ -1,5 +1,7 @@
 #include <iostream>
-#define TAM 5
+#define TAM 2
+
+using namespace std;
 
 void imprime_vetor(int vetor[TAM]);
 int total;
@@ -16,26 +18,13 @@ void imprime_vetor(int vetor[TAM]){
 }
 
 
-void combinatoria(int vetor[], int pos){
-    total++;
-    for (int i = 1; i <= n; i++){
-        vetor[pos] = i;
-        if (pos == (r-1)){
-            imprime_vetor(vetor);
-        }
-        else{
-            combinatoria(vetor, pos+1);
-        }
-    }
-
-}
 
 
 int main(){
-    int vetor = [1, 2];
-    imprime_vetor(vetor);
-    combinatoria_sem(vetor,0,TAM);
 
+    int vec[] = {1, 2};
+    imprime_vetor(vec);
+    combinatoria(vec,0);
 
-
+    return 0;
 }
